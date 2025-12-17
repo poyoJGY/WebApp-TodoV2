@@ -28,7 +28,7 @@ public class ConnectTests {
         Connection connection = DriverManager.getConnection(
                 "jdbc:mariadb://localhost:3307/webdb",
                 "webuser",
-                "");
+                "123");
 
         Assertions.assertNotNull(connection);
 
@@ -42,7 +42,7 @@ public class ConnectTests {
         config.setDriverClassName("org.mariadb.jdbc.Driver");
         config.setJdbcUrl("jdbc:mariadb://localhost:3307/webdb");
         config.setUsername("webuser");
-        config.setPassword("");
+        config.setPassword("123");
         config.addDataSourceProperty("cachePrepStmts", "true");
         config.addDataSourceProperty("prepStmtCacheSize", "250");
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
